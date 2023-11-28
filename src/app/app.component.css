@@ -1,0 +1,5 @@
+/* Estilo para el encabezado */
+#cursos-header {
+    background-color: rgb(0, 119, 58); /* Cambia este valor al color aguamarina oscuro deseado */
+    padding: 10px; /* Añade espacio alrededor del texto para mejorar la apariencia */
+}

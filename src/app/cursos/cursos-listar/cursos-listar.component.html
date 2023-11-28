@@ -1,0 +1,35 @@
+<div class="container-fluid">
+  <div class = "table-responsive" id="cursos-container">
+    
+    <div class="selected-curso " *ngIf="selected">
+      <app-cursos-detail [cursoDetail]="selectedCurso"></app-cursos-detail>
+    </div>
+
+    <table class="table table-striped" id="cursos">
+        <thead class = "thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Plataforma</th>
+                <th scope="col">Lanzamiento</th>
+                <th scope="col">Duración (h)</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cur of cursos">
+            <td><b>{{cur.id}}</b></td>
+            <td style="color:#4099e0;font-weight:500;" (click)="onSelected(cur)">
+              <div >
+                {{cur.title}}
+            </div>
+            </td>
+            <td>{{cur.platform}}</td>
+            <td>{{cur.launch_year}}</td>
+            <td>{{cur.duration_hours}}</td>
+          </tr>
+        </tbody>
+    </table>
+    <p>Los cursos ofrecen certificado </p>
+
+  </div>
+</div>
